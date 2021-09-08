@@ -1,0 +1,5 @@
+<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="configSlide">
+    <div ngxSlickItem *ngFor="let item of data">
+        <img src="{{item}}" alt="Imovel title" title="imovel title" class="img-fluid">
+    </div>
+</ngx-slick-carousel>

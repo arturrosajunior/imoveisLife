@@ -1,0 +1,146 @@
+<div class="container my-3">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+
+<div id="_detalhe-imovel">
+
+    <header class="_tabs">
+        <div class="tab-content">
+            <div class="tab-pane fade active show" id="fotos" role="tabpanel" aria-labelledby="fotos-tab">
+                <div class="_carousel-detalhe-projeto">
+                    <app-carousel [data]="imovel.images"></app-carousel>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="video" role="tabpanel" aria-labelledby="video-tab">
+                video
+            </div>
+            <div class="tab-pane fade " id="mapa" role="tabpanel" aria-labelledby="mapa-tab">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.735654643751!2d-45.83657988502788!3d-23.252704584837087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cdb49904a36a61%3A0x1b93eb8468832031!2sR.%20S%C3%A3o%20Lucas%20-%20Jardim%20Sao%20Judas%20Tadeu%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP%2C%2012228-410!5e0!3m2!1spt-BR!2sbr!4v1631064726690!5m2!1spt-BR!2sbr"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="fotos-tab" data-bs-toggle="tab" data-bs-target="#fotos"
+                    type="button" role="tab" aria-controls="fotos" aria-selected="true">Fotos</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="video-tab" data-bs-toggle="tab" data-bs-target="#video" type="button"
+                    role="tab" aria-controls="video" aria-selected="false">Vídeo</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="mapa-tab" data-bs-toggle="tab" data-bs-target="#mapa" type="button"
+                    role="tab" aria-controls="mapa" aria-selected="false">Mapa</button>
+            </li>
+        </ul>
+    </header>
+
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="_formulario">
+                    <h4 class="mb-0">Faça uma visita!</h4>
+                    <small class="mb-3 d-block">você pode agendar uma visita por vídeo</small>
+
+                    <div class="mb-3">
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email">E-mail:</label>
+                        <input type="text" name="email" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="telefone">Telefone/WhatsApp:</label>
+                        <input type="text" name="telefone" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <p class="mb-0">modo de visita</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"
+                                checked>
+                            <label class="form-check-label" for="inlineCheckbox1">presencial</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">video</label>
+                        </div>
+                    </div>
+
+                    <button class="btn d-block btn-primary w-100 mt-3 p-2">Agendar</button>
+
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <h1>
+                    Casa para alugar com 3 quartos, 120m²
+                </h1>
+                <div class="_flags d-flex ">
+                    <span>Exclusivo</span>
+                    <span>-10%</span>
+                </div>
+
+                <h5 class="_endereco">
+                    Rua Guiana, Cidade Vista Verde, São José dos Campos
+                </h5>
+                <p class="_codigo-imovel"><small>Cód. Imóvel 593298</small></p>
+
+                <div class="_icones">
+                    colocar todos os possiveis, piscina condominio
+                </div>
+
+                <div class="_descricao mt-5">
+                    <div class="_text mb-5">
+                        <h3>Descrição do imóvel</h3>
+                        <p>Casa ampla de esquina com 3 dorms, 3 banheiros, 2 salas, quintal, edícula, piscina, garagem
+                            para
+                            5 carros com 2 entradas separadas. Ideal para “Home-Office” ou ponto comercial, escritório,
+                            consultório médico ou odontológico, escolas, cursos, clínicas, petshop, academia. Próximo a
+                            escola de 1o. grau e em frente a academia de ginástica. Amplo estacionamento nas Ruas Guiana
+                            e
+                            Estados Unidos, na região que mais cresce no Vale do Paraíba a adequada distância de São
+                            Paulo
+                            capital. Área do terreno: 410m2, área útil: 120m2. Para ponto comercial (escritório,
+                            consultório
+                            médico ou odontológico, escolas, cursos, clínicas, petshop, academia) o contrato de aluguel
+                            necessita ser do tipo comercial.</p>
+                    </div>
+
+                    <div class="_text mb-5">
+                        <h3>Palavras do corretor</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione optio facere quod nisi
+                            distinctio. Fugiat aperiam velit alias autem eius doloribus dignissimos maiores, eaque ex
+                            nostrum sunt error. Quae, quibusdam?</p>
+                    </div>
+
+                    <div class="_text mb-5">
+                        <h3>Sobre a imobiliaria</h3>
+                        <div class="row">
+                            <div class="col-md-3">
+                                LOGO AQUI
+                            </div>
+                            <div class="col-md-9">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione optio facere quod
+                                    nisi
+                                    distinctio. Fugiat aperiam velit alias autem eius doloribus dignissimos maiores,
+                                    eaque ex
+                                    nostrum sunt error. Quae, quibusdam?</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+</div>
