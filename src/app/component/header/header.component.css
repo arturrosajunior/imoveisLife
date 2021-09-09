@@ -1,5 +1,5 @@
 header {
-    background-color: plum;
+    background-color: var(--color-green);
     position: sticky;
     position: -webkit-sticky;
     top: 0;

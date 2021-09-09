@@ -1,6 +1,7 @@
 :root {
     --colorThumb: rgb(175, 77, 175);
     --scrollbarBG: rgba(124, 121, 121, 0.507);
+    --color-grenn: #84b800;
 }
 
 ::-webkit-scrollbar {
