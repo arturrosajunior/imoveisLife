@@ -4,6 +4,10 @@ ul#myTab {
     margin-top: 8px;
 }
 
+.nav-tabs .nav-link {
+    color: var(--color-green);
+}
+
 .nav-tabs .nav-link.active {
     border-color: transparent #dee2e6 #dee2e6 !important;
     margin-top: -1px;
@@ -21,8 +25,8 @@ ul#myTab {
     border-radius: 0px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
-    border-left: 3px solid plum;
-    background-color: rgba(221, 160, 221, 0.267);
+    border-left: 3px solid var(--color-green);
+    background-color: rgba(160, 221, 160, 0.267);
     display: inline-block;
     font-size: 12px;
 }
@@ -44,14 +48,32 @@ h3 {
     font-size: 18px;
 }
 
+._iframe iframe {
+    width: 100%;
+    display: block;
+}
+
 /* form */
 
 ._formulario {
     position: sticky;
-    top: 100px;
+    top: 180px;
     background: #fff;
     padding: 24px;
     border-radius: 5px;
     border: 1px solid #dedede;
     box-shadow: 0 2px 4px 0 #534e4e33, 0 4px 8px 0 #47424208;
+}
+
+._formulario h4 {
+    font-weight: 700;
+    color: var(--color-green);
+}
+
+._formulario .btn-primary {
+    color: var(--bs-white);
+    background-color: var(--color-green);
+    border: 0px;
+    text-transform: uppercase;
+    font-weight: 500;
 }

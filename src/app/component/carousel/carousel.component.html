@@ -1,5 +1,23 @@
 <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="configSlide">
     <div ngxSlickItem *ngFor="let item of data">
-        <img src="{{item}}" alt="Imovel title" title="imovel title" class="img-fluid">
+        <ng-container *ngIf="fancybox">
+            <a data-fancybox="gallery" href="{{item}}">
+                <img src="{{item}}" alt="{{title}}" title="{{title}}" class="img-fluid">
+            </a>
+        </ng-container>
+        <ng-container *ngIf="fancybox==false">
+            <img src="{{item}}" alt="{{title}}" title="{{title}}" class="img-fluid">
+        </ng-container>
     </div>
 </ngx-slick-carousel>
+
+<script>
+    $('a[data-fancybox]').fancybox({
+        loop: true,
+        toolbar: 'auto',
+        buttons: ['zoom', 'slideShow', 'thumbs', 'close'],
+        thumbs: {
+            autoStart: true,
+        },
+    });
+</script>

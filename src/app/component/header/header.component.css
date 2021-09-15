@@ -5,3 +5,40 @@ header {
     top: 0;
     z-index: 9999;
 }
+
+._logo {
+    margin: 0 auto;
+    display: block;
+}
+
+._menu {
+    padding: 10px;
+}
+
+._menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+._menu ul li {
+    margin-right: 20px;
+}
+
+._menu ul li:last-child {
+    margin-right: 0px;
+}
+
+._menu ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
+}
+
+._menu ul li a:hover {
+    color: var(--color-green);
+    text-decoration: underline;
+}

@@ -8,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CarouselComponent implements OnInit {
   @Input() data: any;
   @Input() classItem: any;
+  @Input() title: any;
+  @Input() fancybox: any;
 
   configSlide: any;
   slides: any;
@@ -24,10 +26,10 @@ export class CarouselComponent implements OnInit {
         {
           breakpoint: 800,
           settings: {
-            slidesToShow: 2.5,
+            slidesToShow: 1,
             slidesToScroll: 1,
-            initialSlide: 1.5,
             centerMode: false,
+            dots: true,
           },
         },
       ],

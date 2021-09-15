@@ -1,7 +1,6 @@
 :root {
-    --colorThumb: rgb(175, 77, 175);
     --scrollbarBG: rgba(124, 121, 121, 0.507);
-    --color-grenn: #84b800;
+    --color-green: #84b800;
 }
 
 ::-webkit-scrollbar {
@@ -11,7 +10,7 @@
 
 ::-webkit-scrollbar {
     scrollbar-width: thin;
-    scrollbar-color: var(--colorThumb) var(--scrollbarBG);
+    scrollbar-color: var(--color-green) var(--scrollbarBG);
 }
 
 ::-webkit-scrollbar-track {
@@ -19,13 +18,17 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--colorThumb);
+    background-color: var(--color-green);
     border-radius: 6px;
     border: 3px solid var(--scrollbarBG);
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+a {
+    color: var(--color-green);
 }
 
 .slick-next {

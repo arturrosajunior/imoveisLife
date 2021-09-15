@@ -1,5 +1,5 @@
 <div class="container my-3">
-    <app-breadcrumb></app-breadcrumb>
+    <app-breadcrumb [page]="titulo"></app-breadcrumb>
 </div>
 
 <div id="_detalhe-imovel">
@@ -8,16 +8,23 @@
         <div class="tab-content">
             <div class="tab-pane fade active show" id="fotos" role="tabpanel" aria-labelledby="fotos-tab">
                 <div class="_carousel-detalhe-projeto">
-                    <app-carousel [data]="imovel.images"></app-carousel>
+                    <app-carousel [data]="imovel.images" [title]="titulo" [fancybox]="true"></app-carousel>
                 </div>
             </div>
             <div class="tab-pane fade " id="video" role="tabpanel" aria-labelledby="video-tab">
-                video
+                <div class="_iframe">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hvGjRv1ea5w"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
             </div>
             <div class="tab-pane fade " id="mapa" role="tabpanel" aria-labelledby="mapa-tab">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.735654643751!2d-45.83657988502788!3d-23.252704584837087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cdb49904a36a61%3A0x1b93eb8468832031!2sR.%20S%C3%A3o%20Lucas%20-%20Jardim%20Sao%20Judas%20Tadeu%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP%2C%2012228-410!5e0!3m2!1spt-BR!2sbr!4v1631064726690!5m2!1spt-BR!2sbr"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="_iframe">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.735654643751!2d-45.83657988502788!3d-23.252704584837087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cdb49904a36a61%3A0x1b93eb8468832031!2sR.%20S%C3%A3o%20Lucas%20-%20Jardim%20Sao%20Judas%20Tadeu%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP%2C%2012228-410!5e0!3m2!1spt-BR!2sbr!4v1631064726690!5m2!1spt-BR!2sbr"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
 
@@ -79,7 +86,7 @@
 
             <div class="col-md-8">
                 <h1>
-                    Casa para alugar com 3 quartos, 120m²
+                    {{titulo}}
                 </h1>
                 <div class="_flags d-flex ">
                     <span>Exclusivo</span>
@@ -139,7 +146,6 @@
                 </div>
             </div>
         </div>
-
 
     </section>
 
