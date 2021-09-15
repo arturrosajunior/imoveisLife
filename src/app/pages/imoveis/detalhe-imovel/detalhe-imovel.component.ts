@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-detalhe-imovel',
@@ -29,5 +30,12 @@ export class DetalheImovelComponent implements OnInit {
     };
   }
 
+  openForm() {
+    if ($('._formulario').hasClass('_active')) {
+      $('._formulario').removeClass('_active');
+    } else {
+      $('._formulario').addClass('_active');
+    }
+  }
   ngOnInit(): void {}
 }

@@ -3,7 +3,7 @@ header {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 500;
 }
 
 ._logo {
@@ -41,4 +41,13 @@ header {
 ._menu ul li a:hover {
     color: var(--color-green);
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 800px) {
+    header .p-3 {
+        padding-bottom: 0 !important;
+    }
+    ._logo {
+        width: 50px;
+    }
 }

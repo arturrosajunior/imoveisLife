@@ -70,10 +70,58 @@ h3 {
     color: var(--color-green);
 }
 
-._formulario .btn-primary {
+.btn-primary {
     color: var(--bs-white);
     background-color: var(--color-green);
     border: 0px;
     text-transform: uppercase;
     font-weight: 500;
+}
+
+._close {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    ._formulario {
+        padding-top: 10vh;
+        height: 0;
+        position: fixed;
+        top: -200px;
+        width: 100%;
+        left: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: .3s all;
+        z-index: 9000;
+    }
+    ._formulario._active {
+        height: 100%;
+        opacity: 1;
+        overflow: auto;
+        top: 0;
+    }
+    ._close {
+        display: block;
+        opacity: .5;
+        border: 0;
+        background-color: transparent;
+        font-weight: 400;
+        font-size: 21px;
+        margin-bottom: 15px;
+        margin-left: auto;
+    }
+    ._open-form {
+        position: fixed;
+        bottom: 0;
+        z-index: 8000;
+        left: 0;
+        padding: 10px;
+    }
+    h1 {
+        margin-bottom: 15px;
+    }
+    ._flags {
+        margin-bottom: 30px;
+    }
 }

@@ -48,6 +48,8 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="_formulario">
+                    <button (click)="openForm()" class="_close">x</button>
+
                     <h4 class="mb-0">Faça uma visita!</h4>
                     <small class="mb-3 d-block">você pode agendar uma visita por vídeo</small>
 
@@ -81,7 +83,12 @@
 
                     <button class="btn d-block btn-primary w-100 mt-3 p-2">Agendar</button>
 
+
+
                 </div>
+                <button class="_open-form d-block btn-primary w-100 " (click)="openForm()">
+                    Saber mais
+                </button>
             </div>
 
             <div class="col-md-8">
