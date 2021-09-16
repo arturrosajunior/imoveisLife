@@ -1,5 +1,5 @@
 <div class="container my-3 _desk">
-    <app-breadcrumb [page]="titulo"></app-breadcrumb>
+    <app-breadcrumb [page]="imovel.titulo"></app-breadcrumb>
 </div>
 
 <div id="_detalhe-imovel">
@@ -8,7 +8,7 @@
         <div class="tab-content">
             <div class="tab-pane fade active show" id="fotos" role="tabpanel" aria-labelledby="fotos-tab">
                 <div class="_carousel-detalhe-projeto">
-                    <app-carousel [data]="imovel.images" [title]="titulo" [fancybox]="true"></app-carousel>
+                    <app-carousel [data]="imovel.images" [title]="imovel.titulo" [fancybox]="true"></app-carousel>
                 </div>
             </div>
             <div class="tab-pane fade " id="video" role="tabpanel" aria-labelledby="video-tab">
@@ -93,7 +93,7 @@
 
             <div class="col-md-8">
                 <h1>
-                    {{titulo}}
+                    {{imovel.titulo}}
                 </h1>
                 <div class="_flags d-flex ">
                     <span>Exclusivo</span>
@@ -103,10 +103,47 @@
                 <h5 class="_endereco">
                     Rua Guiana, Cidade Vista Verde, São José dos Campos
                 </h5>
-                <p class="_codigo-imovel"><small>Cód. Imóvel 593298</small></p>
+                <p class="_codigo-imovel"><small>Cód. Imóvel {{imovel.ref}}</small></p>
 
                 <div class="_icones">
-                    colocar todos os possiveis, piscina condominio
+                    <div class="row text-center row-cols-4 row-cols-lg-6 justify-content-center align-items-center">
+                        <ng-container *ngIf="imovel.andar!=''">
+                            <div class="col">
+                                <div class="_icon _andar"></div>
+                                <span>{{imovel.andar}}º</span>
+                            </div>
+                        </ng-container>
+                        <ng-container *ngIf="imovel.areatotal!=''">
+                            <div class="col">
+                                <div class="_icon _areatotal"></div>
+                                <span>{{imovel.areatotal}} m² A/T</span>
+                            </div>
+                        </ng-container>
+                        <ng-container *ngIf="imovel.areaconstruida!=''">
+                            <div class="col">
+                                <div class="_icon _areaconstruida"></div>
+                                <span>{{imovel.areaconstruida}} m² A/C</span>
+                            </div>
+                        </ng-container>
+                        <ng-container *ngIf="imovel.banheiro!=''">
+                            <div class="col">
+                                <div class="_icon _banheiro"></div>
+                                <span>{{imovel.banheiro}} </span>
+                            </div>
+                        </ng-container>
+                        <ng-container *ngIf="imovel.garagem!=''">
+                            <div class="col">
+                                <div class="_icon _garagem"></div>
+                                <span>{{imovel.garagem}} </span>
+                            </div>
+                        </ng-container>
+                        <ng-container *ngIf="imovel.quartos!=''">
+                            <div class="col">
+                                <div class="_icon _quartos"></div>
+                                <span>{{imovel.quartos}} </span>
+                            </div>
+                        </ng-container>
+                    </div>
                 </div>
 
                 <div class="_descricao mt-5">
@@ -137,7 +174,8 @@
                         <h3>Sobre a imobiliaria</h3>
                         <div class="row">
                             <div class="col-md-3">
-                                LOGO AQUI
+                                <img src="https://informa.life/wp-content/uploads/2019/10/Logo-Life-Informa-PNG-site20.png"
+                                    alt="Imobiliaria" class="img-fluid mx-auto d-block">
                             </div>
                             <div class="col-md-9">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione optio facere quod

@@ -48,6 +48,10 @@ h3 {
     font-size: 18px;
 }
 
+._text h3 {
+    color: var(--color-green);
+}
+
 ._iframe iframe {
     width: 100%;
     display: block;
@@ -80,6 +84,57 @@ h3 {
 
 ._close {
     display: none;
+}
+
+._icones {
+    margin: 50px 0px 30px;
+}
+
+._icones .col {
+    margin-bottom: 30px;
+}
+
+._icones ._icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    background-color: var(--color-green);
+    margin-bottom: 5px;
+}
+
+._icones ._andar {
+    mask: url(/assets/img/andar.svg) no-repeat center / contain;
+    -webkit-mask: url(/assets/img/andar.svg) no-repeat center / contain;
+}
+
+._icones ._areatotal {
+    mask: url(/assets/img/area.svg) no-repeat center / contain;
+    -webkit-mask: url(/assets/img/area.svg) no-repeat center / contain;
+}
+
+._icones ._areaconstruida {
+    mask: url(/assets/img/area.svg) no-repeat center / contain;
+    -webkit-mask: url(/assets/img/area.svg) no-repeat center / contain;
+}
+
+._icones ._banheiro {
+    mask: url(/assets/img/banheiros.svg) no-repeat center / contain;
+    -webkit-mask: url(/assets/img/banheiros.svg) no-repeat center / contain;
+}
+
+._icones ._garagem {
+    mask: url(/assets/img/car.svg) no-repeat center / contain;
+    -webkit-mask: url(/assets/img/car.svg) no-repeat center / contain;
+}
+
+._icones ._quartos {
+    mask: url(/assets/img/quartos.svg) no-repeat center / contain;
+    -webkit-mask: url(/assets/img/quartos.svg) no-repeat center / contain;
+}
+
+._icones span {
+    font-weight: 500;
 }
 
 @media only screen and (max-width: 800px) {
