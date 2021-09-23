@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-imoveis',
@@ -175,4 +176,11 @@ export class ImoveisComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+  openForm() {
+    if ($('._filter').hasClass('_active')) {
+      $('._filter').removeClass('_active');
+    } else {
+      $('._filter').addClass('_active');
+    }
+  }
 }

@@ -1,3 +1,27 @@
+._grade {
+    border: 0;
+    background: transparent;
+    text-indent: -9999px;
+    width: 20px;
+    height: 30px;
+    margin-right: 20px;
+    mask: url(/assets/img/grade-01.svg) no-repeat center / contain;
+    -webkit-mask: url(/assets/img/grade-01.svg) no-repeat center / contain;
+    background-color: var(--color-green);
+}
+
+._list {
+    border: 0;
+    background: transparent;
+    text-indent: -9999px;
+    width: 20px;
+    height: 30px;
+    margin-right: 20px;
+    mask: url(/assets/img/list-01.svg) no-repeat center / contain;
+    -webkit-mask: url(/assets/img/list-01.svg) no-repeat center / contain;
+    background-color: var(--color-green);
+}
+
 ._icones {
     margin: 20px 0px 0px;
 }
@@ -109,4 +133,71 @@
 ._filter {
     position: sticky;
     top: 150px;
+}
+
+._open-filter, ._close {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    ._controls-list {
+        display: none;
+    }
+    .card-footer {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    ._open-filter {
+        text-indent: -9999px !important;
+        font-size: 0;
+        position: fixed;
+        bottom: 10px;
+        z-index: 8000;
+        padding: 10px;
+        display: block;
+        right: 10px;
+        background-color: var(--color-green);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    ._open-filter:before {
+        mask: url(/assets/img/filter-01.svg) no-repeat center / contain;
+        -webkit-mask: url(/assets/img/filter-01.svg) no-repeat center / contain;
+        background-color: var(--bs-white);
+        width: 100%;
+        height: 30px;
+        content: '';
+        display: block;
+    }
+    ._filter {
+        padding-top: 10vh;
+        height: 0;
+        position: fixed;
+        top: -200px;
+        width: 100%;
+        left: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: .3s all;
+        z-index: 9000;
+        background: #fff;
+        padding: 20px;
+    }
+    ._filter._active {
+        height: 100%;
+        opacity: 1;
+        overflow: auto;
+        top: 0;
+    }
+    ._close {
+        display: block;
+        opacity: .5;
+        border: 0;
+        background-color: transparent;
+        font-weight: 400;
+        font-size: 21px;
+        margin-bottom: 15px;
+        margin-left: auto;
+    }
 }

@@ -1,8 +1,11 @@
-<div id="_imoveis_lis">
+<div id="_imoveis-list" class="py-5">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
                 <div class="_filter pt-3">
+                    <button (click)="openForm()" class="_close">x</button>
+
+                    <h6>Filtrar</h6>
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingOne">
@@ -53,11 +56,16 @@
                         </div>
                     </div>
                 </div>
+                <button class="btn btn-primary  _open-filter" (click)="openForm()">
+                    filtrar
+                </button>
             </div>
             <div class="col-md-9">
                 <div class="_controls-list py-3">
-                    <p><small class="muted">Visualização: </small><button (click)="changeViewList=3">grade</button>
-                        <button (click)="changeViewList=1">lista</button>
+                    <p>
+                        <small class="muted">Visualização: </small>
+                        <button (click)="changeViewList=3" class="_grade">grade</button>
+                        <button (click)="changeViewList=1" class="_list">lista</button>
                     </p>
                 </div>
                 <ng-container *ngIf="imoveis.length > 0">
