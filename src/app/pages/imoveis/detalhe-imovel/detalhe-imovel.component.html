@@ -8,7 +8,9 @@
         <div class="tab-content">
             <div class="tab-pane fade active show" id="fotos" role="tabpanel" aria-labelledby="fotos-tab">
                 <div class="_carousel-detalhe-projeto">
-                    <app-carousel [data]="imovel.images" [title]="imovel.titulo" [fancybox]="true"></app-carousel>
+                    <app-carousel [data]="imovel.images" [title]="imovel.titulo" [fancybox]="true" [centermode]="true"
+                        [viewphoto]="3">
+                    </app-carousel>
                 </div>
             </div>
             <div class="tab-pane fade " id="video" role="tabpanel" aria-labelledby="video-tab">
@@ -171,7 +173,7 @@
                     </div>
 
                     <div class="_text mb-5">
-                        <h3>Sobre a imobiliaria</h3>
+                        <h3>Sobre a Imobiliária</h3>
                         <div class="row">
                             <div class="col-md-3">
                                 <img src="https://informa.life/wp-content/uploads/2019/10/Logo-Life-Informa-PNG-site20.png"

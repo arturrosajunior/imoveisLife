@@ -1,0 +1,112 @@
+._icones {
+    margin: 20px 0px 0px;
+}
+
+._icones .col {
+    margin-bottom: 20px;
+}
+
+._icones ._icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    background-color: var(--color-green);
+    margin-bottom: 5px;
+}
+
+._icones ._andar {
+    mask: url(/assets/img/andar.svg) no-repeat center / contain;
+    -webkit-mask: url(/assets/img/andar.svg) no-repeat center / contain;
+}
+
+._icones ._areatotal {
+    mask: url(/assets/img/area.svg) no-repeat center / contain;
+    -webkit-mask: url(/assets/img/area.svg) no-repeat center / contain;
+}
+
+._icones ._areaconstruida {
+    mask: url(/assets/img/area.svg) no-repeat center / contain;
+    -webkit-mask: url(/assets/img/area.svg) no-repeat center / contain;
+}
+
+._icones ._banheiro {
+    mask: url(/assets/img/banheiros.svg) no-repeat center / contain;
+    -webkit-mask: url(/assets/img/banheiros.svg) no-repeat center / contain;
+}
+
+._icones ._garagem {
+    mask: url(/assets/img/car.svg) no-repeat center / contain;
+    -webkit-mask: url(/assets/img/car.svg) no-repeat center / contain;
+}
+
+._icones ._quartos {
+    mask: url(/assets/img/quartos.svg) no-repeat center / contain;
+    -webkit-mask: url(/assets/img/quartos.svg) no-repeat center / contain;
+}
+
+._icones span {
+    font-weight: 500;
+}
+
+.card-footer {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.card-footer a {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.card {
+    transition: .3s all;
+}
+
+.card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 2px 4px 0 #534e4e33, 0 4px 8px 0 #47424208;
+}
+
+.card:hover .card-footer {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.card h2 {
+    line-height: 20px;
+}
+
+.card h2 a {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.card h2 a:hover {
+    color: var(--color-green);
+    opacity: .8;
+}
+
+.list .card {
+    flex-direction: inherit;
+}
+
+.list .card .card-header {
+    max-width: 30%;
+    display: inline-block;
+}
+
+.list .card .card-body {
+    max-width: 68%;
+    display: inline-block;
+}
+
+._filter {
+    position: sticky;
+    top: 150px;
+}

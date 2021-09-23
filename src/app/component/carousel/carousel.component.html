@@ -1,7 +1,7 @@
 <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="configSlide">
     <div ngxSlickItem *ngFor="let item of data">
         <ng-container *ngIf="fancybox==true">
-            <a data-fancybox="gallery" href="{{item}}">
+            <a [attr.data-fancybox]="'gallery'+id" href="{{item}}">
                 <img src="{{item}}" alt="{{title}}" title="{{title}}" class="img-fluid">
             </a>
         </ng-container>

@@ -40,6 +40,14 @@ a {
     z-index: 10;
 }
 
+.slick-slide {
+    opacity: 0.6;
+}
+
+.slick-slide.slick-active {
+    opacity: 1;
+}
+
 ._carousel-detalhe-projeto .slick-slide {
     margin-right: 2px !important;
 }

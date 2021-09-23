@@ -9,6 +9,7 @@ header {
 ._logo {
     margin: 0 auto;
     display: block;
+    max-width: 70px;
 }
 
 ._menu {

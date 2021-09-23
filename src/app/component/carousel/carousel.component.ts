@@ -6,18 +6,23 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent implements OnInit {
+  @Input() id: any;
   @Input() data: any;
   @Input() classItem: any;
   @Input() title: any;
   @Input() fancybox: any;
+  @Input() viewphoto: any;
+  @Input() centermode: any;
 
   configSlide: any;
   slides: any;
 
-  constructor() {
+  constructor() {}
+  ngOnInit(): void {
+    console.log(this.viewphoto);
     this.configSlide = {
-      centerMode: true,
-      slidesToShow: 3,
+      centerMode: this.centermode,
+      slidesToShow: this.viewphoto,
       arrows: true,
       dots: false,
       swipeToSlide: true,
@@ -35,5 +40,4 @@ export class CarouselComponent implements OnInit {
       ],
     };
   }
-  ngOnInit(): void {}
 }
