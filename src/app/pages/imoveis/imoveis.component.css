@@ -73,6 +73,11 @@
     font-weight: 500;
 }
 
+._endereco {
+    font-size: 12px;
+    line-height: 12px;
+}
+
 .card-footer {
     opacity: 0;
     transform: translateX(50px);
@@ -137,6 +142,14 @@
 
 ._open-filter, ._close {
     display: none;
+}
+
+.accordion-button:not(.collapsed), .accordion-button:focus, .accordion-button {
+    background: transparent;
+    color: inherit;
+    box-shadow: unset;
+    border: 0;
+    position: relative;
 }
 
 @media only screen and (max-width: 800px) {
