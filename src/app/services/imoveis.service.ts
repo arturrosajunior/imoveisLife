@@ -27,6 +27,7 @@ export class ImoveisService {
         garagem: '1',
         quartos: '3',
         endereco: 'rua são lucas, 100 - Jd. São Judas',
+        categoria: ['sala', 'aluguel'],
       },
       {
         id: '2',
@@ -47,6 +48,7 @@ export class ImoveisService {
         banheiro: '2',
         garagem: '1',
         quartos: '3',
+        categoria: ['casa', 'aluguel'],
       },
       {
         id: '1',
@@ -67,6 +69,7 @@ export class ImoveisService {
         banheiro: '2',
         garagem: '1',
         quartos: '3',
+        categoria: ['casa', 'venda'],
       },
       {
         id: '2',
@@ -87,6 +90,7 @@ export class ImoveisService {
         banheiro: '2',
         garagem: '1',
         quartos: '3',
+        categoria: ['sala', 'venda'],
       },
       {
         id: '1',
@@ -107,6 +111,7 @@ export class ImoveisService {
         banheiro: '2',
         garagem: '1',
         quartos: '3',
+        categoria: ['casa', 'aluguel'],
       },
       {
         id: '2',
@@ -127,6 +132,7 @@ export class ImoveisService {
         banheiro: '2',
         garagem: '1',
         quartos: '3',
+        categoria: ['sala', 'venda'],
       },
       {
         id: '1',
@@ -147,6 +153,7 @@ export class ImoveisService {
         banheiro: '2',
         garagem: '1',
         quartos: '3',
+        categoria: ['sala', 'aluguel'],
       },
       {
         id: '2',
@@ -167,6 +174,7 @@ export class ImoveisService {
         banheiro: '2',
         garagem: '1',
         quartos: '3',
+        categoria: ['sala', 'aluguel'],
       },
     ];
   }

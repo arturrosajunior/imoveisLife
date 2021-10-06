@@ -19,7 +19,6 @@ export class CarouselComponent implements OnInit {
 
   constructor() {}
   ngOnInit(): void {
-    console.log(this.viewphoto);
     this.configSlide = {
       centerMode: this.centermode,
       slidesToShow: this.viewphoto,

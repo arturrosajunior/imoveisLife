@@ -10,7 +10,5 @@ export class CardImovelComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.item);
-  }
+  ngOnInit(): void {}
 }
