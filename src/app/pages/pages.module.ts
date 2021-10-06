@@ -13,6 +13,7 @@ import { ImoveisComponent } from './imoveis/imoveis.component';
 import { BreadcrumbComponent } from '../component/breadcrumb/breadcrumb.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CarouselComponent } from '../component/carousel/carousel.component';
+import { CardImovelComponent } from '../component/card-imovel/card-imovel.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CarouselComponent } from '../component/carousel/carousel.component';
     ImoveisComponent,
     BreadcrumbComponent,
     CarouselComponent,
+    CardImovelComponent,
   ],
   imports: [
     CommonModule,

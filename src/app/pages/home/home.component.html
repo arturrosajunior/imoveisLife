@@ -1,36 +1,30 @@
-<div class="container py-5" style="height: 50vh;">
+<div class="container py-5">
     <div class="_filtro mb-5">
         <h2 class="text-center">O que está procurando hoje?</h2>
         <form action="">
-            <div class="input-group my-3">
-                <input type="search" class="form-control  _busca-rapida"
-                    placeholder="Salas Comerciais, Casas, Apartamentos, Terrenos...">
-                <button class="btn btn-outline-secondary">I</button>
-            </div>
+            <input type="search" class="form-control  _busca-rapida my-3"
+                placeholder="Salas Comerciais, Casas, Apartamentos, Terrenos...">
+            <!-- caso tenha preenchido o form a cima lista os anuncios aqui -->
+
+            <ng-container *ngIf="imoveisService.imoveis.length > 0">
+                <div class="_list-imoveis mb-4">
+                    <div class="row row-cols-1 row-cols-lg-4">
+                        <ng-container *ngFor="let item of imoveisService.imoveis">
+                            <div class="col pb-3">
+                                <app-card-imovel [item]="item"></app-card-imovel>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </ng-container>
 
             <div class=" text-right d-flex mt-5 justify-content-center">
                 <div id="_avancada" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    class="btn btn-outline-warning p-3">Busca avançada</div>
+                    class="btn btn-outline-success py-3 px-5">Deseja fazer uma busca avançada?</div>
             </div>
         </form>
     </div>
-
-
 </div>
-
-<div class="_buttons-home alert alert-info p-5 mb-5 d-flex flex-row justify-content-evenly text-center ">
-    <div class="btn _alugar">
-        Alugar
-    </div>
-    <div class="btn _vender">
-        Vender
-    </div>
-    <div class="btn _procurar">
-        Procurar
-    </div>
-</div>
-
-
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

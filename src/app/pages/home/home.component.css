@@ -12,18 +12,3 @@
     font-weight: 600;
     padding: 60px 10px;
 }
-
-._alugar {
-    border-radius: 5px;
-    background-color: rgb(26, 152, 190);
-}
-
-._vender {
-    border-radius: 5px;
-    background-color: rgb(224, 221, 45);
-}
-
-._procurar {
-    border-radius: 5px;
-    background-color: rgb(188, 45, 224);
-}

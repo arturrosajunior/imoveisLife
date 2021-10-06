@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-header p-0">
+        <!-- limitar fotos para nao carregar todas  -->
+        <app-carousel [id]="item.id" [data]="item.images" [title]="item.titulo" [fancybox]="true" [viewphoto]="1">
+        </app-carousel>
+    </div>
+    <div class="card-body">
+        <h2>
+            <a [routerLink]="['/imovel/'+item.id]">
+                {{item.titulo}}
+            </a>
+        </h2>
+        <div class="_icones">
+            <div class="row text-center row-cols-4 row-cols-lg-3 justify-content-center align-items-center">
+
+                <ng-container *ngIf="item.areaconstruida!=''">
+                    <div class="col">
+                        <div class="_icon _areaconstruida"></div>
+                        <span>{{item.areaconstruida}} m²</span>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="item.quartos!=''">
+                    <div class="col">
+                        <div class="_icon _quartos"></div>
+                        <span>{{item.quartos}} </span>
+                    </div>
+                </ng-container>
+
+                <ng-container *ngIf="item.garagem!=''">
+                    <div class="col">
+                        <div class="_icon _garagem"></div>
+                        <span>{{item.garagem}} </span>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <p *ngIf="item?.endereco" class="_endereco">{{item.endereco}}</p>
+
+    </div>
+    <div class="card-footer pt-3">
+        <a [routerLink]="['/imovel/'+item.id]" class="btn btn-outline-primary d-block w-100">
+            ver mais
+        </a>
+    </div>
+</div>
