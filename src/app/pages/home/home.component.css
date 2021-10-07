@@ -13,35 +13,60 @@
     padding: 60px 10px;
 }
 
-#myInput {
-    background-image: url('/css/searchicon.png');
-    background-position: 10px 12px;
-    background-repeat: no-repeat;
-    width: 100%;
-    font-size: 16px;
-    padding: 12px 20px 12px 40px;
-    border: 1px solid #ddd;
-    margin-bottom: 12px;
-}
-
 #myUL {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-#myUL li a {
-    border: 1px solid #ddd;
-    margin-top: -1px;
-    /* Prevent double borders */
-    background-color: #f6f6f6;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
-    display: block
+#myUL li {
+    position: relative;
 }
 
-#myUL li a:hover:not(.header) {
-    background-color: #eee;
+#myUL label {
+    font-size: 12px;
+    border-radius: 20px;
+    background-color: #ccc;
+    opacity: .7;
+    line-height: 12px;
+    padding: 3px 10px;
+    position: absolute;
+    z-index: 10;
+    left: 30px;
+    top: 10px;
+}
+
+._title h3 {
+    opacity: .7;
+    font-size: 18px;
+}
+
+._filtro-avancado {
+    max-width: 700px;
+    margin: 30px auto 100px;
+}
+
+._filtro-avancado label {
+    position: absolute;
+}
+
+.position-relative {
+    margin-bottom: 25px;
+}
+
+.position-relative label {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    opacity: .6;
+    font-size: 13px;
+}
+
+.position-relative:hover label {
+    opacity: 1;
+}
+
+.position-relative select, .position-relative input {
+    padding: 40px 20px 10px;
+    font-weight: 600;
 }

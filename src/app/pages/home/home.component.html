@@ -1,10 +1,56 @@
 <div class="container py-5">
-    <div class="_filtro mb-5">
-        <h2 class="text-center">O que está procurando hoje?</h2>
+    <div class="_filtro-avancado">
+        <div class="text-center _title mb-4">
+            <h2>O que está procurando hoje?</h2>
+            <h3 class="muted">Faça uma busca e entre em contato</h3>
+        </div>
         <form action="">
-            <input type="text" class="form-control  _busca-rapida my-3"
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="position-relative">
+                        <label for="">o que deseja?</label>
+                        <select class="form-select">
+                            <option value="aluguel">Aluguel</option>
+                            <option value="comprar">Comprar</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="position-relative">
+                        <label for="">Bairro que deseja</label>
+                        <input type="text" class="form-control" placeholder="Bairro">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="position-relative">
+                        <label for="">Qual valor se encaixa</label>
+                        <input type="text" class="form-control" placeholder="Valor">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="position-relative">
+                        <label for="">Até quantos quartos</label>
+                        <input type="text" class="form-control" placeholder="Quartos">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <button class="btn btn-success px-5 py-3 d-block w-100 fw-bolder text-uppercase">
+                        Buscar imovéis
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="_filtro mb-5">
+        <h2 class="text-center">Separamos essas ofertas para você!</h2>
+        <form action="">
+            <input type="text" class="form-control  _busca-rapida my-5"
                 placeholder="Salas Comerciais, Casas, Apartamentos, Terrenos..." id="myInput" (keyup)="myFunction()">
-            <!-- caso tenha preenchido o form a cima lista os anuncios aqui -->
 
             <ng-container *ngIf="imoveisService.imoveis.length > 0">
                 <div class="_list-imoveis mb-4">
@@ -14,37 +60,12 @@
                                 <label>
                                     <ng-container *ngFor="let cat of item.categoria">{{cat}} </ng-container>
                                 </label>
-
                                 <app-card-imovel [item]="item"></app-card-imovel>
                             </li>
                         </ng-container>
                     </ul>
                 </div>
             </ng-container>
-
-            <div class=" text-right d-flex mt-5 justify-content-center">
-                <div id="_avancada" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    class="btn btn-outline-success py-3 px-5">Deseja fazer uma busca avançada?</div>
-            </div>
         </form>
-    </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
     </div>
 </div>
