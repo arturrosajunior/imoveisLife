@@ -12,12 +12,14 @@
 
     <div class="container-fluid py-2 px-0">
         <div class="_menu" style="background-color: #f5f5f5;">
+            <button class="_button-menu" (click)="openForm()"></button>
             <ul>
-                <li><a routerLink="/">home</a></li>
-                <li><a routerLink="imoveis">Imóveis</a></li>
-                <li><a routerLink="imoveis">Salas Comerciais</a></li>
-                <li><a routerLink="quero-anunciar">Quero anunciar</a></li>
+                <li (click)="openForm()"><a routerLink="/">home</a></li>
+                <li (click)="openForm()"><a routerLink="imoveis">Imóveis</a></li>
+                <li (click)="openForm()"><a routerLink="imoveis">Salas Comerciais</a></li>
+                <li (click)="openForm()"><a routerLink="quero-anunciar">Quero anunciar</a></li>
             </ul>
         </div>
+
     </div>
 </header>
