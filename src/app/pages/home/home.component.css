@@ -70,3 +70,8 @@
     padding: 40px 20px 10px;
     font-weight: 600;
 }
+
+._porque-anunciar {
+    max-width: 700px;
+    margin: 0 auto 50px;
+}

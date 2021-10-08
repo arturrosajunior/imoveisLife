@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { DetalheImovelComponent } from './imoveis/detalhe-imovel/detalhe-imovel.component';
 import { ImoveisComponent } from './imoveis/imoveis.component';
 import { PagesComponent } from './pages.component';
+import { QueroAnunciarComponent } from './quero-anunciar/quero-anunciar.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
       {
         path: 'home',
         component: HomeComponent,
+      },
+      {
+        path: 'quero-anunciar',
+        component: QueroAnunciarComponent,
       },
       {
         path: 'imoveis',
