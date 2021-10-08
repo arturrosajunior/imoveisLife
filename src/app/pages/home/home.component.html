@@ -46,27 +46,23 @@
     </div>
 </div>
 
-<div class="container py-5">
+<div class="container py-3">
     <div class="_filtro mb-5">
-        <h2 class="text-center">Separamos essas ofertas para você!</h2>
-        <form action="">
-            <input type="text" class="form-control  _busca-rapida my-5"
-                placeholder="Salas Comerciais, Casas, Apartamentos, Terrenos..." id="myInput" (keyup)="myFunction()">
+        <h2 class="text-center mb-5">Separamos essas ofertas para você!</h2>
 
-            <ng-container *ngIf="imoveisService.imoveis.length > 0">
-                <div class="_list-imoveis mb-4">
-                    <ul class="row row-cols-1 row-cols-lg-4" id="myUL">
-                        <ng-container *ngFor="let item of imoveisService.imoveis">
-                            <li class="col pb-3">
-                                <label>
-                                    <ng-container *ngFor="let cat of item.categoria">{{cat}} </ng-container>
-                                </label>
-                                <app-card-imovel [item]="item"></app-card-imovel>
-                            </li>
-                        </ng-container>
-                    </ul>
-                </div>
-            </ng-container>
-        </form>
+        <ng-container *ngIf="imoveisService.imoveis.length > 0">
+            <div class="_list-imoveis mb-4">
+                <ul class="row row-cols-1 row-cols-lg-4" id="myUL">
+                    <ng-container *ngFor="let item of imoveisService.imoveis">
+                        <li class="col pb-3">
+                            <label>
+                                <ng-container *ngFor="let cat of item.categoria">{{cat}} </ng-container>
+                            </label>
+                            <app-card-imovel [item]="item"></app-card-imovel>
+                        </li>
+                    </ng-container>
+                </ul>
+            </div>
+        </ng-container>
     </div>
 </div>

@@ -65,22 +65,37 @@
                 </button>
             </div>
             <div class="col-md-9">
-                <div class="_controls-list py-3">
-                    <p>
-                        <small class="muted">Visualização: </small>
-                        <button (click)="changeViewList=3" class="_grade">grade</button>
-                        <button (click)="changeViewList=1" class="_list">lista</button>
-                    </p>
-                </div>
-                <ng-container *ngIf="imoveisService.imoveis.length > 0">
-                    <div class="row row-cols-1 row-cols-lg-{{changeViewList}} " [class.list]="changeViewList==1">
-                        <ng-container *ngFor="let item of imoveisService.imoveis">
-                            <div class="col pb-3">
-                                <app-card-imovel [item]="item"></app-card-imovel>
-                            </div>
-                        </ng-container>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <div class="_controls-list py-3">
+                            <p>
+                                <small class="muted">Visualização: </small>
+                                <button (click)="changeViewList=3" class="_grade">grade</button>
+                                <button (click)="changeViewList=1" class="_list">lista</button>
+                            </p>
+                        </div>
                     </div>
-                </ng-container>
+                    <div class="col-md-8">
+                        <small class="muted">busca rápida: </small>
+
+                        <input type="text" class="form-control  _busca-rapida"
+                            placeholder="Salas Comerciais, Casas, Apartamentos, Terrenos..." id="myInput"
+                            (keyup)="myFunction()">
+                    </div>
+                </div>
+
+                <div class="_list-imoveis mb-4">
+                    <ul class="row row-cols-1 row-cols-lg-{{changeViewList}}" id="myUL">
+                        <ng-container *ngFor="let item of imoveisService.imoveis">
+                            <li class="col pb-3">
+                                <label>
+                                    <ng-container *ngFor="let cat of item.categoria">{{cat}} </ng-container>
+                                </label>
+                                <app-card-imovel [item]="item"></app-card-imovel>
+                            </li>
+                        </ng-container>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

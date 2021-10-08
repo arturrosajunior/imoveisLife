@@ -60,6 +60,19 @@ a {
     display: none;
 }
 
+.row-cols-lg-1 .card {
+    flex-direction: initial !important;
+}
+
+.row-cols-lg-1 .card-header {
+    max-width: 30%;
+}
+
+.row-cols-lg-1 .card-header img {
+    height: 210px !important;
+    object-fit: cover !important;
+}
+
 @media only screen and (max-width: 800px) {
     ._desk {
         display: none;
