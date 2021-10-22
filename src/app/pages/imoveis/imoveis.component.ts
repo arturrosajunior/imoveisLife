@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { ImoveisService } from 'src/app/services/imoveis.service';
 
+
+
 @Component({
   selector: 'app-imoveis',
   templateUrl: './imoveis.component.html',
@@ -10,9 +12,15 @@ import { ImoveisService } from 'src/app/services/imoveis.service';
 export class ImoveisComponent implements OnInit {
   changeViewList = 3;
 
-  constructor(public imoveisService: ImoveisService) {}
+  imoveis:any;
 
-  ngOnInit(): void {}
+  constructor(public imoveisService: ImoveisService) {
+  }
+
+  async ngOnInit(): Promise<void> { 
+    this.imoveis = await this.imoveisService.getItems();
+  }
+
   openForm() {
     if ($('._filter').hasClass('_active')) {
       $('._filter').removeClass('_active');

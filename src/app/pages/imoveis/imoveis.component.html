@@ -76,7 +76,7 @@
                         <div class="_controls-list py-3">
                             <p>
                                 <small class="muted">Visualização: </small>
-                                <button (click)="changeViewList=3" class="_grade">grade</button>
+                                <button (click)="changeViewList=3" class="m-2 _grade">grade</button>
                                 <button (click)="changeViewList=1" class="_list">lista</button>
                             </p>
                         </div>
@@ -92,12 +92,15 @@
 
                 <div class="_list-imoveis mb-4">
                     <ul class="row row-cols-1 row-cols-lg-{{changeViewList}}" id="myUL">
-                        <ng-container *ngFor="let item of imoveisService.imoveis">
+                        <ng-container *ngFor="let item of imoveis">
                             <li class="col pb-3">
+                                
                                 <label>
-                                    <ng-container *ngFor="let cat of item.categoria">{{cat}} </ng-container>
+                                    <ng-container>{{item.type}} {{item.mode}}</ng-container>
                                 </label>
+
                                 <app-card-imovel [item]="item"></app-card-imovel>
+
                             </li>
                         </ng-container>
                     </ul>

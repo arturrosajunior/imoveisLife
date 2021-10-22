@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  urlAPI: 'https://devnation.com.br/client-staging/imoveis-life/api'
 };
 
 /*
