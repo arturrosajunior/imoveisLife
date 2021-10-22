@@ -4,3 +4,8 @@ img {
     object-fit: cover;
     height: 179px;
 }
+
+._h-full{
+    object-fit: none;
+    height: auto;
+}

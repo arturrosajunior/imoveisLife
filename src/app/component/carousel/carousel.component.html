@@ -2,11 +2,11 @@
     <div ngxSlickItem *ngFor="let item of data">
         <ng-container *ngIf="fancybox==true">
             <a [attr.data-fancybox]="'gallery'+id" href="{{item.url}}">
-                <img src="{{item.url}}" alt="{{item.legend}}" title="{{item.legend}}" class="img-fluid">
+                <img src="{{item.url}}" alt="{{item.legend}}" title="{{item.legend}}" class="img-fluid" >
             </a>
         </ng-container>
         <ng-container *ngIf="fancybox==false">
-            <img src="{{item.url}}" alt="{{item.legend}}" title="{{item.legend}}" class="img-fluid">
+            <img src="{{item.url}}" alt="{{item.legend}}" title="{{item.legend}}" class="img-fluid" >
         </ng-container>
     </div>
 </ngx-slick-carousel>

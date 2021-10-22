@@ -73,6 +73,12 @@ a {
     object-fit: cover !important;
 }
 
+
+._carousel-detalhe-projeto img{
+    height: 380px !important;
+    object-fit: cover !important;
+}
+
 @media only screen and (max-width: 800px) {
     ._desk {
         display: none;

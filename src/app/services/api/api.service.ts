@@ -17,7 +17,7 @@ export class ApiService {
 
   async readId(url: String, id: Number) {
     try {
-      let response = await this.request.get(`${url}/${id}`);
+      let response = await this.request.get(`${url}/?id=${id}`);
       return await (response.data);
     } catch (error) {
       const { response } = error;

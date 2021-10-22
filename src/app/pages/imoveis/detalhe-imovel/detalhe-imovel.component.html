@@ -1,26 +1,28 @@
 <div class="container my-3 _desk">
-    <app-breadcrumb [page]="imovel.titulo"></app-breadcrumb>
+    <app-breadcrumb [page]="imovel.title"></app-breadcrumb>
 </div>
 
 <div id="_detalhe-imovel">
 
     <header class="_tabs">
         <div class="tab-content">
+            
             <div class="tab-pane fade active show" id="fotos" role="tabpanel" aria-labelledby="fotos-tab">
                 <div class="_carousel-detalhe-projeto">
-                    <app-carousel [data]="imovel.images" [title]="imovel.titulo" [fancybox]="true" [centermode]="true"
-                        [viewphoto]="3">
+                    <app-carousel [data]="imovel.photos" [title]="imovel.title" [fancybox]="true" [centermode]="true" [viewphoto]="3">
                     </app-carousel>
                 </div>
             </div>
-            <div class="tab-pane fade " id="video" role="tabpanel" aria-labelledby="video-tab">
+
+            <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-tab">
                 <div class="_iframe">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/hvGjRv1ea5w"
-                        title="YouTube video player" frameborder="0"
+                        title="Video" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
             </div>
+
             <div class="tab-pane fade " id="mapa" role="tabpanel" aria-labelledby="mapa-tab">
                 <div class="_iframe">
                     <iframe
@@ -95,74 +97,69 @@
 
             <div class="col-md-8">
                 <h1>
-                    {{imovel.titulo}}
+                    {{imovel.title}}
                 </h1>
-                <div class="_flags d-flex ">
+                <div class="_flags d-flex mb-4">
                     <span>Exclusivo</span>
                     <span>-10%</span>
                 </div>
 
-                <h5 class="_endereco">
-                    Rua Guiana, Cidade Vista Verde, São José dos Campos
+                <h5 *ngIf="imovel.address?.district" class="_endereco m-0">
+                   Bairro: {{imovel.address.district}}
                 </h5>
-                <p class="_codigo-imovel"><small>Cód. Imóvel {{imovel.ref}}</small></p>
+                <p *ngIf="imovel.address?.zone">
+                    zona: {{imovel.address.zone}}
+                </p>
+
+                <p class="_codigo-imovel"><small>Cód. Imóvel {{imovel.id}}</small></p>
 
                 <div class="_icones">
                     <div class="row text-center row-cols-4 row-cols-lg-6 justify-content-center align-items-center">
-                        <ng-container *ngIf="imovel.andar!=''">
+                        <ng-container *ngIf="imovel.info.andar!=''">
                             <div class="col">
                                 <div class="_icon _andar"></div>
-                                <span>{{imovel.andar}}º</span>
+                                <span>{{imovel.info.andar}}º</span>
                             </div>
                         </ng-container>
-                        <ng-container *ngIf="imovel.areatotal!=''">
+                        <ng-container *ngIf="imovel.info.meters.total!=''">
                             <div class="col">
                                 <div class="_icon _areatotal"></div>
-                                <span>{{imovel.areatotal}} m² A/T</span>
+                                <span>{{imovel.info.meters.total}} m² A/T</span>
                             </div>
                         </ng-container>
-                        <ng-container *ngIf="imovel.areaconstruida!=''">
+                        <ng-container *ngIf="imovel.info.meters.build!=''">
                             <div class="col">
                                 <div class="_icon _areaconstruida"></div>
-                                <span>{{imovel.areaconstruida}} m² A/C</span>
+                                <span>{{imovel.info.meters.build}} m² A/C</span>
                             </div>
                         </ng-container>
-                        <ng-container *ngIf="imovel.banheiro!=''">
+                        <ng-container *ngIf="imovel.info.bathroom!=''">
                             <div class="col">
                                 <div class="_icon _banheiro"></div>
-                                <span>{{imovel.banheiro}} </span>
+                                <span>{{imovel.info.bathroom}} </span>
                             </div>
                         </ng-container>
-                        <ng-container *ngIf="imovel.garagem!=''">
+                        <ng-container *ngIf="imovel.info.garage!=''">
                             <div class="col">
                                 <div class="_icon _garagem"></div>
-                                <span>{{imovel.garagem}} </span>
+                                <span>{{imovel.info.garage}} </span>
                             </div>
                         </ng-container>
-                        <ng-container *ngIf="imovel.quartos!=''">
+                        <ng-container *ngIf="imovel.info.floor!=''">
                             <div class="col">
                                 <div class="_icon _quartos"></div>
-                                <span>{{imovel.quartos}} </span>
+                                <span>{{imovel.info.floor}} </span>
                             </div>
                         </ng-container>
                     </div>
                 </div>
 
                 <div class="_descricao mt-5">
-                    <div class="_text mb-5">
+                    <div *ngIf="imovel?.description" class="_text mb-5">
                         <h3>Descrição do imóvel</h3>
-                        <p>Casa ampla de esquina com 3 dorms, 3 banheiros, 2 salas, quintal, edícula, piscina, garagem
-                            para
-                            5 carros com 2 entradas separadas. Ideal para “Home-Office” ou ponto comercial, escritório,
-                            consultório médico ou odontológico, escolas, cursos, clínicas, petshop, academia. Próximo a
-                            escola de 1o. grau e em frente a academia de ginástica. Amplo estacionamento nas Ruas Guiana
-                            e
-                            Estados Unidos, na região que mais cresce no Vale do Paraíba a adequada distância de São
-                            Paulo
-                            capital. Área do terreno: 410m2, área útil: 120m2. Para ponto comercial (escritório,
-                            consultório
-                            médico ou odontológico, escolas, cursos, clínicas, petshop, academia) o contrato de aluguel
-                            necessita ser do tipo comercial.</p>
+                        <p>
+                            {{imovel.description}}
+                        </p>
                     </div>
 
                     <div class="_text mb-5">
