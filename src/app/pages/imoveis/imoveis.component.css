@@ -24,7 +24,7 @@
 
 ._filter {
     position: sticky;
-    top: 150px;
+    top: 50px;
 }
 
 ._open-filter, ._close {

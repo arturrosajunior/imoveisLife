@@ -1,0 +1,18 @@
+._move-to-up {
+    display: block;
+    transform: rotate(90deg);
+    background: rgba(145, 145, 145, 0.8);
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 2px;
+    padding: 5px;
+    cursor: pointer;
+}
+._move-to-up span{
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: url('/assets/img/arrow.svg') center no-repeat;
+}
