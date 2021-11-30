@@ -79,10 +79,11 @@
         padding: 10px;
         display: block;
         right: 10px;
-        background-color: var(--color-green);
+        background-color: #2b2b89;
         width: 50px;
         height: 50px;
         border-radius: 50%;
+        border: 0px;
     }
     ._open-filter:before {
         mask: url(/assets/img/filter-01.svg) no-repeat center / contain;
